@@ -22,7 +22,7 @@ title: Style Meets Substance
 email: musasizivicky06@gmail.com
 description: >-
   A fashion designer's creative diary — teaching, designing, and inspiring elegance in everyday wear.
-baseurl: "/myblog" 
+baseurl: "" 
 url: "https://musasizivictoria.github.io"
 twitter_username: musasiziv
 github_username: musasizivictoria
@@ -35,6 +35,7 @@ plugins:
 # Optional custom settings
 author: Victoria Musasizi
 show_excerpts: true
+future: true
 header_pages:
   - about.markdown
 

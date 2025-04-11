@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Style Meets Identity: The Power of Fashion Education"
-date: 2025-04-11 10:00:00 +0300
+date: 2023-04-11 10:00:00 +0300
 categories: fashion teaching inspiration
 ---
 
