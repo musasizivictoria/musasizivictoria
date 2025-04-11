@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    {% include head-custom.html %}
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      <header class="header">
+        <div class="container clearfix">
+          <a href="{{ "/" | absolute_url }}" class="site-title">{{ site.title | default: site.github.repository_name }}</a>
+          
+          <nav class="nav-list">
+            {% for page in site.header_pages %}
+              {% assign my_page = site.pages | where: "path", page | first %}
+              {% if my_page.title %}
+                <a href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+              {% endif %}
+            {% endfor %}
+          </nav>
+        </div>
+      </header>
+
+      {{ content }}
+
+      <footer class="footer">
+        <div class="container">
+          <h2 class="footer-heading">{{ site.title | escape }}</h2>
+          <div class="footer-col-wrapper">
+            <div class="footer-col">
+              <ul class="contact-list">
+                <li>{{ site.author | escape }}</li>
+                {% if site.email %}
+                <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+                {% endif %}
+              </ul>
+            </div>
+            
+            <div class="footer-col">
+              <ul class="social-media-list">
+                {% if site.github_username %}
+                <li>
+                  <a href="https://github.com/{{ site.github_username }}">GitHub: {{ site.github_username }}</a>
+                </li>
+                {% endif %}
+                {% if site.twitter_username %}
+                <li>
+                  <a href="https://twitter.com/{{ site.twitter_username }}">Twitter: @{{ site.twitter_username }}</a>
+                </li>
+                {% endif %}
+              </ul>
+            </div>
+            
+            <div class="footer-col">
+              <p>{{ site.description | escape }}</p>
+              <p class="copyright">© {{ 'now' | date: "%Y" }} {{ site.author | default: site.title }}</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
