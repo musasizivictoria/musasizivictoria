@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Where Style Meets Substance: Teaching Fashion Beyond the Runway"
-date: 2023-04-11 09:00:00 +0300
+date: 2025-04-11 09:00:00 +0300
 categories: fashion education creativity
 author: Victoria Musasizi
 ---
