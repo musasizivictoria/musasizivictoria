@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Victoria Couture | Fashion Designer & Teacher</title>
+  <title>Victoria Couture | Fashion Designer & Teacher</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -44,11 +44,13 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
     }
     
     .logo {
       display: flex;
       align-items: center;
+      margin-bottom: 15px;
     }
     
     .logo img {
@@ -64,12 +66,26 @@
     
     h1, h2, h3 {
       font-family: 'Playfair Display', serif;
-      margin-bottom: 1rem;
     }
     
     h1 {
       font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
       color: var(--primary-color);
+    }
+    
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    p {
+      margin-bottom: 1.5rem;
     }
     
     .hero {
@@ -77,68 +93,126 @@
       text-align: center;
     }
     
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    
     .hero p {
-      max-width: 700px;
-      margin: 0 auto 2rem;
       font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto 2rem;
     }
     
-    .links {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      max-width: 600px;
-      margin: 2rem auto;
-    }
-    
-    .link-card {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    .btn {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: white;
+      padding: 12px 30px;
+      border-radius: 30px;
       text-decoration: none;
-      color: var(--text-color);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      font-weight: 600;
+      transition: all 0.3s ease;
     }
     
-    .link-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    .btn:hover {
+      background-color: var(--accent-color);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     }
     
-    .link-card h3 {
-      margin-bottom: 0.5rem;
-      color: var(--primary-color);
+    .about, .services, .portfolio, .blog, .contact {
+      padding: 4rem 0;
     }
     
-    .link-card p {
-      font-size: 0.9rem;
-      opacity: 0.8;
+    .about {
+      background-color: white;
     }
     
-    .link-card .arrow {
-      font-size: 1.5rem;
-      color: var(--accent-color);
+    .services-grid, .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .service-card, .portfolio-item {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .service-card:hover, .portfolio-item:hover {
+      transform: translateY(-10px);
+    }
+    
+    .service-card img, .portfolio-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .service-content, .portfolio-content {
+      padding: 1.5rem;
     }
     
     footer {
+      background-color: var(--text-color);
+      color: white;
+      padding: 3rem 0;
       text-align: center;
-      padding: 2rem 0;
-      margin-top: 3rem;
-      border-top: 1px solid rgba(0,0,0,0.1);
-      font-size: 0.9rem;
     }
     
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2rem;
+    footer a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+    
+    footer a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Responsive styles */
+    @media screen and (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .logo {
+        margin-bottom: 15px;
+        justify-content: center;
+      }
+      
+      .hero h1 {
+        font-size: 2.5rem;
       }
       
       .hero p {
         font-size: 1rem;
+      }
+      
+      .services-grid, .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    @media screen and (max-width: 480px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .btn {
+        padding: 10px 20px;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      h2 {
+        font-size: 1.7rem;
       }
     }
   </style>
@@ -151,46 +225,74 @@
           <img src="myblog/assets/images/Pasted image.png" alt="Victoria Couture Logo">
           <div class="logo-text">Victoria Couture</div>
         </div>
-        <h1>Musasizi Victoria</h1>
-        <p>Fashion Designer & Educator</p>
+        <div class="header-info">
+          <h1>Musasizi Victoria</h1>
+          <p>Fashion Designer & Educator</p>
+        </div>
       </div>
     </header>
     
     <section class="hero">
-      <h2>Welcome to My Creative Space</h2>
-      <p>I'm passionate about empowering through creativity and knowledge, blending the art of fashion design with the power of education.</p>
+      <h1>Elegance in Every Stitch</h1>
+      <p>Creating fashion that empowers, educating designers who inspire. Explore my work and join me on this creative journey.</p>
+      <a href="myblog/" class="btn">Read My Blog</a>
     </section>
     
-    <div class="links">
-      <a href="myblog/" class="link-card">
-        <div>
-          <h3>My Blog</h3>
-          <p>Explore my journey, designs, and teaching insights</p>
+    <section class="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>I'm Victoria Musasizi, a fashion designer and educator with a passion for creating elegant, sustainable clothing that celebrates individuality. With over a decade of experience in the fashion industry, I've developed a unique approach that blends traditional craftsmanship with contemporary design.</p>
+        <p>My mission is to not only create beautiful garments but also to educate the next generation of designers, empowering them with the skills and knowledge to make their mark in the fashion world.</p>
+      </div>
+    </section>
+    
+    <section class="services">
+      <div class="container">
+        <h2>What I Offer</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-content">
+              <h3>Custom Design</h3>
+              <p>Bespoke clothing designed specifically for you, taking into account your style, body shape, and preferences.</p>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-content">
+              <h3>Fashion Education</h3>
+              <p>Workshops, courses, and one-on-one mentoring for aspiring designers at all levels.</p>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-content">
+              <h3>Sustainable Fashion</h3>
+              <p>Eco-friendly designs using sustainable materials and ethical production methods.</p>
+            </div>
+          </div>
         </div>
-        <span class="arrow">→</span>
-      </a>
-      
-      <a href="#" class="link-card">
-        <div>
-          <h3>Fashion Portfolio</h3>
-          <p>View my latest designs and creative work</p>
-        </div>
-        <span class="arrow">→</span>
-      </a>
-      
-      <a href="#" class="link-card">
-        <div>
-          <h3>Classes & Mentorship</h3>
-          <p>Learn about my teaching philosophy and opportunities</p>
-        </div>
-        <span class="arrow">→</span>
-      </a>
-    </div>
+      </div>
+    </section>
+    
+    <section class="blog">
+      <div class="container">
+        <h2>From My Blog</h2>
+        <p>I regularly share insights, tips, and stories from my journey as a fashion designer and educator. Visit my blog to learn more about fashion design, sustainability, and the creative process.</p>
+        <a href="myblog/" class="btn">Visit Blog</a>
+      </div>
+    </section>
+    
+    <section class="contact">
+      <div class="container">
+        <h2>Get in Touch</h2>
+        <p>Interested in working together or learning more about what I do? I'd love to hear from you!</p>
+        <p>Email: <a href="mailto:musasizivicky06@gmail.com">musasizivicky06@gmail.com</a></p>
+      </div>
+    </section>
   </div>
   
   <footer>
     <div class="container">
-      <p> 2025 Victoria Musasizi | Where Style Meets Substance</p>
+      <p>&copy; 2023 Victoria Couture. All rights reserved.</p>
+      <p>Designed with passion by Victoria Musasizi</p>
     </div>
   </footer>
 </body>

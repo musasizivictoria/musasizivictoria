@@ -1,4 +1,5 @@
 /* Custom styles for Victoria's fashion blog */
+
 body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.7;
@@ -10,32 +11,57 @@ h1, h2, h3, h4, h5, h6 {
   color: #333;
 }
 
-.page-header {
-  background-color: #d4af37;
-  background-image: linear-gradient(120deg, #d4af37, #9c8144);
-}
-
-.main-content h1, 
-.main-content h2, 
-.main-content h3, 
-.main-content h4, 
-.main-content h5, 
-.main-content h6 {
+a {
   color: #d4af37;
-  font-family: 'Playfair Display', serif;
+  transition: color 0.3s ease;
 }
 
-.main-content {
-  max-width: 64rem;
-  padding: 2rem 6rem;
-  margin: 0 auto;
-  font-size: 1.1rem;
+a:hover {
+  color: #9c8144;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Header styling */
+.site-header {
+  border-bottom: 1px solid #e8e8e8;
+  padding: 15px 0;
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #d4af37;
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.site-nav .page-link {
+  margin-left: 20px;
+  color: #333;
 }
 
 /* Gallery styling for About page */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   grid-gap: 1.5rem;
   margin: 2rem 0;
 }
@@ -98,55 +124,99 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0.75rem;
 }
 
-/* Header navigation */
-.header-nav {
-  margin-top: 1rem;
+/* Post preview on home page */
+.post-preview {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e8e8e8;
 }
 
-.header-nav .btn {
-  background-color: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 0.3rem;
-  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
-  margin: 0 0.5rem;
+.post-preview h2 {
+  margin-bottom: 0.5rem;
 }
 
-.header-nav .btn:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.3);
+.post-preview h2 a {
+  color: #d4af37;
+  text-decoration: none;
+}
+
+.post-date {
+  display: block;
+  font-size: 0.9rem;
+  color: #828282;
+  margin-bottom: 1rem;
 }
 
 /* Footer styling */
 .site-footer {
-  padding-top: 2rem;
-  margin-top: 2rem;
-  border-top: solid 1px #eff0f1;
+  border-top: 1px solid #e8e8e8;
+  padding: 30px 0;
+  margin-top: 60px;
 }
 
-.footer-content {
-  max-width: 64rem;
-  margin: 0 auto;
+.footer-heading {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
 }
 
-.footer-content h3 {
-  font-size: 1.4rem;
-  color: #d4af37;
+.contact-list,
+.social-media-list {
+  list-style: none;
+  margin-left: 0;
 }
 
-.social-links a {
-  margin-right: 1rem;
-  color: #606c71;
+/* Responsive styles */
+@media screen and (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
 }
 
-.social-links a:hover {
-  color: #d4af37;
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
 }
 
-.copyright {
-  margin-top: 1rem;
-  color: #606c71;
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* Mobile-specific styles */
+@media screen and (max-width: 767px) {
+  .site-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .site-nav {
+    margin-top: 15px;
+    justify-content: center;
+  }
+  
+  .site-nav .page-link {
+    margin: 0 10px;
+  }
+  
+  .post-link {
+    font-size: 1.5rem;
+  }
+  
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  
+  .gallery figure img {
+    height: 200px;
+  }
 }
 
 /* Responsive adjustments */
