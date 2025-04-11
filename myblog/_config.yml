@@ -27,11 +27,10 @@ url: "https://musasizivictoria.github.io"
 twitter_username: musasiziv
 github_username: musasizivictoria
 
-theme: jekyll-theme-primer
+theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-sitemap
 
 # Optional custom settings
 author: Victoria Musasizi

@@ -1,0 +1,167 @@
+/* Custom styles for Victoria's fashion blog */
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  color: #333;
+}
+
+.page-header {
+  background-color: #d4af37;
+  background-image: linear-gradient(120deg, #d4af37, #9c8144);
+}
+
+.main-content h1, 
+.main-content h2, 
+.main-content h3, 
+.main-content h4, 
+.main-content h5, 
+.main-content h6 {
+  color: #d4af37;
+  font-family: 'Playfair Display', serif;
+}
+
+.main-content {
+  max-width: 64rem;
+  padding: 2rem 6rem;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+/* Gallery styling for About page */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.gallery figure {
+  margin: 0;
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery figure:hover {
+  transform: translateY(-5px);
+}
+
+.gallery figure img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery figure figcaption {
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+}
+
+/* Post styling */
+.post-list {
+  margin-left: 0;
+  list-style: none;
+}
+
+.post-list > li {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.post-meta {
+  font-size: 0.9rem;
+  color: #828282;
+  margin-bottom: 0.5rem;
+}
+
+.post-link {
+  display: block;
+  font-size: 1.8rem;
+  color: #d4af37;
+  margin-bottom: 0.5rem;
+}
+
+.post-excerpt {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 0.75rem;
+}
+
+/* Header navigation */
+.header-nav {
+  margin-top: 1rem;
+}
+
+.header-nav .btn {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0.3rem;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  margin: 0 0.5rem;
+}
+
+.header-nav .btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Footer styling */
+.site-footer {
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border-top: solid 1px #eff0f1;
+}
+
+.footer-content {
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.footer-content h3 {
+  font-size: 1.4rem;
+  color: #d4af37;
+}
+
+.social-links a {
+  margin-right: 1rem;
+  color: #606c71;
+}
+
+.social-links a:hover {
+  color: #d4af37;
+}
+
+.copyright {
+  margin-top: 1rem;
+  color: #606c71;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 42em) {
+  .main-content {
+    padding: 2rem;
+  }
+  
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+  
+  .header-nav .btn {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}
