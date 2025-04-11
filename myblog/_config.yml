@@ -27,7 +27,7 @@ url: "https://musasizivictoria.github.io"
 twitter_username: musasiziv
 github_username: musasizivictoria
 
-theme: minima
+theme: jekyll-theme-primer
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
